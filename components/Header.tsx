@@ -36,9 +36,12 @@ export default function Header() {
         <nav className="flex items-center">
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="lg:hidden">
-                {/* <MenuIcon  /> */}
-                <CiMenuFries className="h-6 w-6" />
+              <Button
+                variant="ghost"
+                size="icon"
+                className="lg:hidden bg-background-light dark:bg-background-dark hover:bg-box-light dark:hover:bg-box-dark"
+              >
+                <CiMenuFries className="h-6 w-6 text-background-dark dark:text-background-light" />
                 <span className="sr-only">Toggle navigation</span>
               </Button>
             </SheetTrigger>
