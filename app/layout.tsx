@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,10 +19,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} antialiased h-dvh bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark`}
+        className={`${inter.className} antialiased flex flex-col min-h-dvh bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark`}
       >
         <Header />
-        <main>{children}</main>
+        <div className="flex-grow">
+          <main className="container mx-auto px-4 md:px-6 py-16 md:py-16">
+            {children}
+          </main>
+        </div>
+        <Footer />
       </body>
     </html>
   );
