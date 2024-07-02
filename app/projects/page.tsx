@@ -76,7 +76,7 @@ const ProjectCard: React.FC<Project> = ({
   githubUrl,
   liveUrl,
 }) => (
-  <div className="flex-shrink-0 w-80 bg-white dark:bg-secondary rounded-lg shadow-lg overflow-hidden">
+  <div className="flex-shrink-0  w-80 bg-white dark:bg-secondary rounded-lg shadow-lg overflow-hidden">
     <Image
       src={imageUrl}
       alt={title}
@@ -117,9 +117,9 @@ const ProjectCard: React.FC<Project> = ({
 const Projects: React.FC = () => {
   return (
     <section className="w-full py-12 md:py-24 lg:py-32">
-      <div className="container max-w-6xl px-4 md:px-6">
-        <div className="lg:flex lg:gap-12">
-          <div className="lg:w-1/3 space-y-6 mb-12 lg:mb-0">
+      <div className="container max-w-5xl px-4 md:px-6">
+        <div className="grid gap-12 lg:grid-cols-[1fr,2fr]">
+          <div className="space-y-6">
             <h2 className="text-3xl font-bold tracking-tighter text-text-light dark:text-text-dark sm:text-4xl md:text-5xl">
               My Projects
             </h2>
@@ -134,13 +134,13 @@ const Projects: React.FC = () => {
               View Github
             </Link>
           </div>
-          <div className="lg:w-2/3 overflow-x-auto lg:overflow-x-visible lg:overflow-y-auto max-h-[600px]">
-            <div className="flex flex-col items-center lg:items-start lg:flex-row lg:flex-wrap lg:gap-6 space-y-6 lg:space-y-0">
-              {projectsData.map((project) => (
-                <div key={project.id} className="w-full lg:w-[calc(50%-12px)]">
-                  <ProjectCard {...project} />
-                </div>
-              ))}
+          <div className="flex justify-center">
+            <div className="w-full flex justify-center max-w-md rounded-lg shadow-none lg:shadow-md p-6 lg:overflow-y-auto lg:max-h-[600px]">
+              <div className="space-y-6 ">
+                {projectsData.map((project) => (
+                  <ProjectCard key={project.id} {...project} />
+                ))}
+              </div>
             </div>
           </div>
         </div>
