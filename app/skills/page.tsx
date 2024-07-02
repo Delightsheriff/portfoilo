@@ -28,13 +28,13 @@ interface SkillCardProps {
 }
 
 const SkillCard: React.FC<SkillCardProps> = ({ name, imageSrc }) => (
-  <div className="flex flex-col items-center justify-center gap-4 rounded-lg border  dark:border-none p-4 space-y-2 text-center shadow-shadow-light  shadow-md dark:shadow-md transition-transform duration-300 ease-in-out group hover:scale-95 ">
+  <div className="flex flex-col items-center justify-center gap-4 rounded-lg border  dark:border-box-light p-4 space-y-2 text-center shadow-shadow-light  shadow-md dark:shadow-md transition-transform duration-300 ease-in-out group hover:scale-95 ">
     <div className="relative w-12 h-12">
       <Image
         src={imageSrc}
         alt={`${name} logo`}
         layout="fill"
-        objectFit="cover"
+        objectFit="contain"
       />
     </div>
     <span className="text-sm font-medium text-text-light capitalize dark:text-text-dark">
@@ -62,7 +62,7 @@ const Skills: React.FC = () => {
               Here are some of the technologies I&apos;ve used:
             </p>
             <Link
-              href="/resume"
+              href="#"
               className="inline-block px-6 py-3 text-sm font-medium text-center text-background-light bg-text-light rounded-md hover:bg-box-light transition-colors duration-300 dark:text-background-dark dark:bg-text-dark dark:hover:bg-box-dark"
             >
               View Resumé
