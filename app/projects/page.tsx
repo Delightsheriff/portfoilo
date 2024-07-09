@@ -101,20 +101,30 @@ const ProjectCard: React.FC<Project> = ({
 
 const Projects: React.FC = () => {
   return (
-    <section className="w-full  py-12 md:py-24 lg:py-30">
+    <section className="w-full  py-12 ">
       <div className="container max-w-5xl px-0 md:px-6">
         <div className="grid gap-12 lg:grid-cols-2">
           <div className="space-y-6">
             <h2 className="text-3xl font-bold tracking-tighter text-text-light dark:text-text-dark sm:text-4xl md:text-5xl">
-              My Projects
+              My Digital Playground
             </h2>
             <p className="max-w-[700px] text-text-light dark:text-text-dark md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Here are some of the projects I&apos;ve worked on, showcasing my
-              skills in full-stack development.
+              Welcome to my project showcase, where code meets creativity. As a
+              full-stack developer, I craft digital experiences that span from
+              sleek front-end designs to robust back-end architectures. Each
+              project in my GitHub repository represents a unique challenge
+              conquered, demonstrating my passion for innovative solutions
+              across the entire development stack.
+            </p>
+            <p className="max-w-[700px] text-text-light dark:text-text-dark md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+              Explore my work to see how I transform ideas into reality, pushing
+              the boundaries of what&apos;s possible in web development
             </p>
 
             <Link
-              href="https://github.com/yourusername"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/Delightsheriff"
               className="inline-block px-6 py-3 text-sm font-medium text-center text-background-light bg-text-light rounded-md hover:bg-box-light transition-colors duration-300 dark:text-background-dark dark:bg-text-dark dark:hover:bg-box-dark"
             >
               View Github

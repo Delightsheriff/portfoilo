@@ -8,18 +8,18 @@ interface Skill {
 }
 
 const skillsData: Skill[] = [
-  { name: "HTML", imageSrc: "/html.png" },
-  { name: "CSS", imageSrc: "/css.png" },
-  { name: "JavaScript", imageSrc: "/js.png" },
-  { name: "Git", imageSrc: "/git.png" },
-  { name: "React", imageSrc: "/react.png" },
-  { name: "Next.js", imageSrc: "/nextjs.png" },
-  { name: "Tailwind CSS", imageSrc: "/tailwindcss.png" },
-  { name: "TypeScript", imageSrc: "/typescript.png" },
-  { name: "Node.js", imageSrc: "/nodejs.png" },
-  { name: "MongoDB", imageSrc: "/mongodb.png" },
-  { name: "supabase", imageSrc: "/supabase.png" },
-  { name: "express", imageSrc: "/express-js.png" },
+  { name: "HTML", imageSrc: "/html.svg" },
+  { name: "CSS", imageSrc: "/css.svg" },
+  { name: "JavaScript", imageSrc: "/javascript.svg" },
+  { name: "Git", imageSrc: "/git.svg" },
+  { name: "React", imageSrc: "/react.svg" },
+  { name: "Next.js", imageSrc: "/nextjs.svg" },
+  { name: "Tailwind CSS", imageSrc: "/tailwind.svg" },
+  { name: "TypeScript", imageSrc: "/typescript.svg" },
+  { name: "Node.js", imageSrc: "/nodejs.svg" },
+  { name: "MongoDB", imageSrc: "/mongodb.svg" },
+  { name: "supabase", imageSrc: "/supabase.svg" },
+  { name: "express", imageSrc: "/express.svg" },
 ];
 
 interface SkillCardProps {
@@ -45,7 +45,7 @@ const SkillCard: React.FC<SkillCardProps> = ({ name, imageSrc }) => (
 
 const Skills: React.FC = () => {
   return (
-    <section className="w-full border border-red-800 py-12 md:py-24 lg:py-32 ">
+    <section className="w-full border border-red-800 py-12  ">
       <div className="container max-w-5xl px-0 md:px-6">
         <div className="grid gap-12 lg:grid-cols-2">
           <div className="space-y-6">
@@ -62,7 +62,9 @@ const Skills: React.FC = () => {
               Here are some of the technologies I&apos;ve used:
             </p>
             <Link
-              href="#"
+              href="https://drive.google.com/file/d/1amjF_SzXe91wb9aOtIgqWM9eR9yG30qS/view?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block px-6 py-3 text-sm font-medium text-center text-background-light bg-text-light rounded-md hover:bg-box-light transition-colors duration-300 dark:text-background-dark dark:bg-text-dark dark:hover:bg-box-dark"
             >
               View Resumé
