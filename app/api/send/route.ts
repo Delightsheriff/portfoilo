@@ -1,15 +1,27 @@
-import GithubAccessTokenEmail from "@/components/email-template";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 
-export async function GET() {
+export async function POST(request: NextRequest) {
+  const fromEmail = process.env.RESEND_EMAIL;
+  const toEmail = process.env.PERSONAL_EMAIL;
+
+  if (!fromEmail || !toEmail) {
+    console.error("Missing email configuration");
+    return NextResponse.json(
+      { error: "Server misconfiguration" },
+      { status: 500 },
+    );
+  }
+
   const resend = new Resend(process.env.RESEND_API_KEY);
   try {
+    const { name, email, message } = await request.json();
+
     const { data, error } = await resend.emails.send({
-      from: "onboarding@resend.dev", // Use this for testing or your verified domain
-      to: "delightsheriff@gmail.com",
-      subject: "Hello World",
-      react: GithubAccessTokenEmail({ username: "Delight" }),
+      from: fromEmail,
+      to: toEmail,
+      subject: `New Contact Form Submission from ${name}`,
+      text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
     });
 
     console.log("Email send response:", { data, error });
