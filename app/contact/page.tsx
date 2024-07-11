@@ -15,7 +15,7 @@ const initialState: State = {
   success: false,
 };
 
-export default function page() {
+export default function Page() {
   const [state, formAction] = useFormState(send, initialState);
   return (
     <section className="w-full  py-12  ">
