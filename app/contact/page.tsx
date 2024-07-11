@@ -12,7 +12,7 @@ export default function page() {
         <div className="grid lg:grid-cols-2 gap-8 w-full max-w-6xl mx-auto py-12 md:py-20 px-4 md:px-6">
           <div className="space-y-4">
             <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">
-              Want to work with me? Let's Connect
+              Want to work with me? Let&apos;s Connect
             </h2>
             <p className="text-muted-foreground md:text-xl">
               I am open to remote and onsite full-time, part-time, and contract

@@ -16,7 +16,7 @@ const skillsData: Skill[] = [
   { name: "Next.js", imageSrc: "/nextjs.svg" },
   { name: "Tailwind CSS", imageSrc: "/tailwind.svg" },
   { name: "TypeScript", imageSrc: "/typescript.svg" },
-  { name: "Node.js", imageSrc: "/nodejs.svg" },
+  { name: "Node.js", imageSrc: "/node-js.svg" },
   { name: "MongoDB", imageSrc: "/mongodb.svg" },
   { name: "supabase", imageSrc: "/supabase.svg" },
   { name: "express", imageSrc: "/express.svg" },
@@ -28,13 +28,14 @@ interface SkillCardProps {
 }
 
 const SkillCard: React.FC<SkillCardProps> = ({ name, imageSrc }) => (
-  <div className="flex flex-col items-center justify-center gap-4 rounded-lg border  dark:border-box-light p-4 space-y-2 text-center shadow-shadow-light  shadow-md dark:shadow-md transition-transform duration-300 ease-in-out group hover:scale-95 ">
+  <div className="flex flex-col items-center justify-center gap-4 rounded-lg border  dark:border-box-light px-4 py-6 space-y-2 text-center shadow-shadow-light  shadow-md dark:shadow-md transition-transform duration-300 ease-in-out group hover:scale-95 ">
     <div className="relative w-12 h-12">
       <Image
         src={imageSrc}
         alt={`${name} logo`}
-        layout="fill"
-        objectFit="contain"
+        fill
+        sizes="(max-width: 48px) 100vw, 48px"
+        style={{ objectFit: "contain" }}
       />
     </div>
     <span className="text-sm font-medium text-text-light capitalize dark:text-text-dark">
@@ -45,7 +46,7 @@ const SkillCard: React.FC<SkillCardProps> = ({ name, imageSrc }) => (
 
 const Skills: React.FC = () => {
   return (
-    <section className="w-full border border-red-800 py-12  ">
+    <section className="w-full  py-12  ">
       <div className="container max-w-5xl px-0 md:px-6">
         <div className="grid gap-12 lg:grid-cols-2">
           <div className="space-y-6">

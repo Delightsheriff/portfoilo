@@ -8,7 +8,7 @@ interface Project {
   id: string;
   title: string;
   description: string;
-  technologies: string;
+  technologies: string[];
   imageUrl: string;
   githubUrl: string;
   liveUrl: string;
@@ -19,7 +19,7 @@ const projectsData: Project[] = [
     id: "1",
     title: "My Blog website",
     description: "I write about tech and lifestyle",
-    technologies: "React + Tailwind + Sanity(CMS)",
+    technologies: ["React", "Tailwind", "Sanity(CMS)"],
     imageUrl: "/pt.png",
     githubUrl: "https://github.com/preshpi/Sanity-react-blog",
     liveUrl: "https://preshblog.vercel.app/",
@@ -28,7 +28,7 @@ const projectsData: Project[] = [
     id: "2",
     title: "My Blog website",
     description: "I write about tech and lifestyle",
-    technologies: "React + Tailwind + Sanity(CMS)",
+    technologies: ["React", "Tailwind", "Sanity(CMS)"],
     imageUrl: "/pt.png",
     githubUrl: "https://github.com/preshpi/Sanity-react-blog",
     liveUrl: "https://preshblog.vercel.app/",
@@ -37,7 +37,7 @@ const projectsData: Project[] = [
     id: "3",
     title: "My Blog website",
     description: "I write about tech and lifestyle",
-    technologies: "React + Tailwind + Sanity(CMS)",
+    technologies: ["React", "Tailwind", "Sanity(CMS)"],
     imageUrl: "/pt.png",
     githubUrl: "https://github.com/preshpi/Sanity-react-blog",
     liveUrl: "https://preshblog.vercel.app/",
@@ -54,27 +54,31 @@ const ProjectCard: React.FC<Project> = ({
   githubUrl,
   liveUrl,
 }) => (
-  <div className="w-full    bg-background-light dark:bg-background-dark  rounded-lg shadow-lg overflow-hidden">
-    {/* <div className="flex-shrink-0   bg-background-light dark:bg-background-dark  rounded-lg shadow-lg overflow-hidden"> */}
-    <div className="w-full aspect-[16/9] relative">
+  <div className="w-full bg-background-light dark:bg-background-dark rounded-lg shadow-lg overflow-hidden">
+    <div className="w-full aspect-square relative">
       <Image
         src={imageUrl}
         alt={title}
         layout="fill"
-        objectFit="cover"
-        quality={100}
-        className="w-full h-full"
+        className="object-fill "
       />
     </div>
 
     <div className="p-5 pt-9 pb-9 flex flex-col">
-      <h3 className="font-medium text-lg text-text-light dark:text-text-dark ">
+      <h3 className="font-medium text-lg text-text-light dark:text-text-dark">
         {title}
       </h3>
       <p className="text-text-light dark:text-text-dark text-sm mt-2">
         {description}
       </p>
-      <p className="mt-3 text-text-light dark:text-text-dark">{technologies}</p>
+      <div className="mt-3 text-text-light dark:text-text-dark">
+        {technologies.map((tech, index) => (
+          <span key={index}>
+            {tech}
+            {index < technologies.length - 1 && " + "}
+          </span>
+        ))}
+      </div>
       <div className="mt-4 flex gap-6">
         <Link
           href={githubUrl}
@@ -110,15 +114,15 @@ const Projects: React.FC = () => {
             </h2>
             <p className="max-w-[700px] text-text-light dark:text-text-dark md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               Welcome to my project showcase, where code meets creativity. As a
-              full-stack developer, I craft digital experiences that span from
-              sleek front-end designs to robust back-end architectures. Each
-              project in my GitHub repository represents a unique challenge
-              conquered, demonstrating my passion for innovative solutions
-              across the entire development stack.
+              full-stack developer, I craft digital experiences from sleek
+              front-end designs to robust back-end architectures. Each
+              noteworthy project in my GitHub repository represents a unique
+              challenge conquered, demonstrating my passion for innovative
+              solutions across the development stack.
             </p>
             <p className="max-w-[700px] text-text-light dark:text-text-dark md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               Explore my work to see how I transform ideas into reality, pushing
-              the boundaries of what&apos;s possible in web development
+              the boundaries of web development
             </p>
 
             <Link
