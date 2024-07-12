@@ -25,6 +25,20 @@ export async function send(
   prevState: State,
   formData: FormData,
 ): Promise<State> {
+  const initialState: State = {
+    errors: {},
+    message: null,
+    success: false,
+  };
+
+  if (
+    !formData.get("name") &&
+    !formData.get("email") &&
+    !formData.get("message")
+  ) {
+    return initialState;
+  }
+
   const validatedFields = FormSchema.safeParse({
     name: formData.get("name"),
     email: formData.get("email"),
