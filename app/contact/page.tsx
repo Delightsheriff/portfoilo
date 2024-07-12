@@ -30,22 +30,23 @@ export default function Page() {
               part-time, and contract frontend web development jobs
             </p>
           </div>
-          <Card className="border border-gray-900 py-8">
+          <Card className=" rounded-lg border bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark  dark:border-box-light shadow-shadow-light  shadow-md dark:shadow-md transition-transform duration-300 py-8">
             <CardContent className="space-y-4">
               <form action={formAction}>
-                <div className="space-y-2">
+                <div className="space-y-2 my-4">
                   <Label htmlFor="name">Name</Label>
                   <Input
                     id="name"
                     placeholder="Enter your name"
                     name="name"
                     required
+                    className="bg-background-light dark:bg-background-dark"
                   />
                   {state.errors?.name && (
                     <p className="text-red-500 text-sm">{state.errors.name}</p>
                   )}
                 </div>
-                <div className="space-y-2">
+                <div className="space-y-2 my-4">
                   <Label htmlFor="email">Email</Label>
                   <Input
                     id="email"
@@ -53,17 +54,18 @@ export default function Page() {
                     name="email"
                     placeholder="Enter your email"
                     required
+                    className="bg-background-light dark:bg-background-dark"
                   />
                   {state.errors?.email && (
                     <p className="text-red-500 text-sm">{state.errors.email}</p>
                   )}
                 </div>
-                <div className="space-y-2">
+                <div className="space-y-2 my-4">
                   <Label htmlFor="message">Message</Label>
                   <Textarea
                     id="message"
                     placeholder="Enter your message"
-                    className="min-h-[120px]"
+                    className="min-h-[120px] bg-background-light dark:bg-background-dark"
                     name="message"
                     required
                   />
@@ -73,7 +75,7 @@ export default function Page() {
                     </p>
                   )}
                 </div>
-                <Button className="w-full px-6 py-3 text-sm font-medium text-center text-background-light bg-text-light rounded-md hover:bg-box-light transition-colors duration-300 dark:text-background-dark dark:bg-text-dark dark:hover:bg-box-dark">
+                <Button className="w-full px-6 py-3 mt-4 text-sm font-medium text-center text-background-light bg-text-light rounded-md hover:bg-box-light transition-colors duration-300 dark:text-background-dark dark:bg-text-dark dark:hover:bg-box-dark">
                   Connect
                 </Button>
               </form>
