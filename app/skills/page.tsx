@@ -1,6 +1,15 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Skills | Delight Amadi-Sheriff",
+  description:
+    "Discover the technical skills of Delight Amadi-Sheriff, a full stack developer proficient in JavaScript, TypeScript, React, Node.js, and more.",
+  keywords:
+    "Full Stack Developer, JavaScript, TypeScript, React, Node.js, Frontend, Backend, Web Development, Next.js, Tailwind CSS, MongoDB, Express, supabase",
+};
 
 interface Skill {
   name: string;

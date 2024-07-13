@@ -3,6 +3,15 @@ import Link from "next/link";
 import Image from "next/image";
 import { FaGithub } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Projects | Delight Amadi-Sheriff",
+  description:
+    "Explore the projects developed by Delight Amadi-Sheriff, showcasing expertise in full stack development, web applications, and innovative solutions.",
+  keywords:
+    "Full Stack Projects, Web Development, JavaScript Projects, React Projects, Node.js Projects, Portfolio, Delight Amadi-Sheriff Projects, GitHub Projects, Web Applications, Frontend, Backend",
+};
 
 interface Project {
   id: string;

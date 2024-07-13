@@ -20,7 +20,7 @@ export async function POST(request: NextRequest) {
     const { data, error } = await resend.emails.send({
       from: fromEmail,
       to: toEmail,
-      subject: `New Contact Form Submission from ${name}`,
+      subject: `Someone Wants to Connect with You!`,
       text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
     });
 

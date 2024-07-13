@@ -5,7 +5,6 @@ export default function Home() {
     <section className="w-full  py-12  ">
       <div className="container max-w-5xl px-0 md:px-6">
         <div className="flex items-center justify-center max-w-[700px]  mx-auto">
-          {/* <div className="grid gap-12 lg:grid-cols-2"> */}
           <div className="space-y-6 text-center">
             <h2 className="text-4xl font-bold tracking-tighter  text-text-light dark:text-text-dark sm:text-4xl md:text-5xl">
               Hello, I&apos;m Delight Amadi-Sheriff
@@ -15,7 +14,7 @@ export default function Home() {
               journey in 2022. Since then, I&apos;ve been dedicated to creating
               impactful web solutions that blend appealing design with robust
               functionality. My experience includes valuable internships at HNG,
-              NIIT Port Harcourt, and SmartHub, where I honed my skills in both
+              NIIT, and SmartTech Global, where I honed my skills in both
               frontend and backend development. As an ALX Software Engineering
               graduate, I&apos;ve further solidified my expertise in crafting
               efficient, user-centric applications.
@@ -36,15 +35,6 @@ export default function Home() {
               View Resumé
             </Link>
           </div>
-          {/* <div className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4">
-            {skillsData.map((skill) => (
-              <SkillCard
-                key={skill.name}
-                name={skill.name}
-                imageSrc={skill.imageSrc}
-              />
-            ))}
-          </div> */}
         </div>
       </div>
     </section>
