@@ -143,7 +143,7 @@ const Projects: React.FC = () => {
               View Github
             </Link>
           </div>
-          <div className="rounded-lg shadow-none lg:shadow-md  lg:max-h-[500px] lg:overflow-y-auto p-4">
+          <div className="rounded-lg shadow-none lg:shadow-md  lg:max-h-[500px] lg:overflow-y-auto scroll-smooth p-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6 w-full">
               {projectsData.map((project) => (
                 <ProjectCard key={project.id} {...project} />

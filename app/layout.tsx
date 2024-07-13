@@ -46,7 +46,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${montserrat.className} antialiased flex flex-col min-h-dvh bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark`}
+        className={`${montserrat.className} antialiased flex flex-col min-h-dvh bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark scroll-smooth`}
       >
         <Header />
         <div className="flex-grow">
